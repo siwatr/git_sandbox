@@ -30,7 +30,9 @@ git branch -a
 
 # Branch on branch
 git checkout -b branch_1 main
-git checkout -b branch_2 branch_1
+git checkout -b branch_1_1 branch_1
+# do some work
+git commit -am "work on branch_1_1"
 
 #region MARK: Alias
 # Here are some useful aliases to be added to the config
