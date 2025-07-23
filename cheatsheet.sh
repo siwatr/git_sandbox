@@ -28,3 +28,9 @@ git branch -a
 git remote update origin --prune
 git branch -a
 
+#region MARK: Alias
+# Here are some useful aliases to be added to the config
+git config --global alias.st status
+git config --global alias.unstage 'reset HEAD --'
+git config --global alias.graph "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all"
+git config --global alias.longgraph "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
