@@ -36,6 +36,13 @@ git commit -am "work on branch_1_1"
 git checkout branch_1
 git merge --no-ff branch_1_1 # Merge to the branch
 
+#region MARK: squash merge
+git checkout -b b1 main
+git checkout -b squash_branch b1 # assume we're working on a sub branch
+# make some changes
+git checkout b1
+git merge --squash squash_branch
+
 #region MARK: Alias
 # Here are some useful aliases to be added to the config
 git config --global alias.st status
