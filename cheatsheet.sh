@@ -28,6 +28,10 @@ git branch -a
 git remote update origin --prune
 git branch -a
 
+# Branch on branch
+git checkout -b branch_1 main
+git checkout -b branch_2 branch_1
+
 #region MARK: Alias
 # Here are some useful aliases to be added to the config
 git config --global alias.st status
