@@ -28,6 +28,14 @@ git branch -a
 git remote update origin --prune
 git branch -a
 
+# Branch on branch
+git checkout -b branch_1 main
+git checkout -b branch_1_1 branch_1
+# do some work
+git commit -am "work on branch_1_1"
+git checkout branch_1
+git merge --no-ff branch_1_1 # Merge to the branch
+
 #region MARK: Alias
 # Here are some useful aliases to be added to the config
 git config --global alias.st status
